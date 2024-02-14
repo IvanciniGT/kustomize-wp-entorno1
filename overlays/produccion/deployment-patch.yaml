@@ -1,0 +1,17 @@
+---
+# Deployment WP
+apiVersion:             apps/v1
+kind:                   Deployment
+metadata:
+    name:               wp
+spec:
+    replicas:           2
+    template:
+        spec:
+            containers: 
+                - name:         wp
+                  resources:
+                    request: 
+                        cpu: 2
+                    limits:
+                        cpu: 4
